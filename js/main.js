@@ -175,12 +175,12 @@ function validateEmail(email) {
 	console.log(mail);
 	if (validateEmail(mail)) {
 		// $mailele.text(email + " is valid :)");
-		$mailele.css("border-color", "green");
+		$mailele.css("border", "1px solid #4285F4");
 		button.disabled = false;
 
 	  } else {
 		// $mailele.text(email + " is not valid :(");
-		$mailele.css("border-color", "red");
+		$mailele.css("border", "1px solid red");
 		button.disabled = true
 	  }
   }
