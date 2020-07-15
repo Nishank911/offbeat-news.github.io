@@ -73,9 +73,9 @@
 		</div>
 		<div class="container lead-generation">
 			<p>Smart News curator based on <span>progress </span>,<span> possibilities</span> and <span>solutions</span> from around the world. <br>Get the download link now</p>
-			<form class="lead">
-				<input name="email" placeholder="hello@xyz.com" class="email"  />
-				<input name="access" class="btn" type="submit" value="Get Access" />
+			<form class="lead" id="#lead">
+				<input name="email" placeholder="hello@xyz.com" class="email" id = "email" onchange = "validate()" />
+				<input name="access" class="btn get-access" value="Get Access" onclick= "sendmail()"  />
 			</form>
 
 		</div>
@@ -133,10 +133,10 @@
 	<footer class="footer-section text-center">
 		<div class="container">
 			<h2 class="section-title mb-5">Try out our beta!</h2>
-			<form class="lead">
-				<input name="email" placeholder="hello@xyz.com" class="email"  />
-				<input name="access" class="btn" type="submit" value="Get Access" />
-			</form>
+
+
+			<a href="#email">	<input name="access" class="btn get-access" value="Get Access" /> </a>
+
 			<div class="social-links">
 				<a href=""><span class="fa fa-pinterest"></span></a>
 				<a href=""><span class="fa fa-linkedin"></span></a>
@@ -155,10 +155,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
 	<!--====== Javascripts & Jquery ======-->
+	<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/mixitup.min.js"></script>
 	<script src="js/magnific-popup.min.js"></script>
 	<script src="js/main.js"></script>
+
 </body>
 </html>

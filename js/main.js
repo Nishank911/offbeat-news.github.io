@@ -2,7 +2,7 @@
 ------------------------------------
 	Riddle - Portfolio
 	Version: 1.0
- ------------------------------------ 
+ ------------------------------------
  ====================================*/
 
 
@@ -10,11 +10,12 @@
 'use strict';
 
 
-$(window).on('load', function() { 
+
+$(window).on('load', function() {
 	/*------------------
 		Preloder
 	--------------------*/
-	$(".loader").fadeOut(); 
+	$(".loader").fadeOut();
 	$("#preloder").delay(400).fadeOut("slow");
 
 	if($('.portfolios-area').length > 0 ) {
@@ -126,3 +127,60 @@ if($().circleProgress){
 }
 
 })(jQuery);
+
+
+var is_loading = false;
+
+const firebaseConfig = {
+	apiKey: "AIzaSyBCIh1JzI41cLPO1heSQsYe_xu0t8VPijY",
+    authDomain: "bluebird-ee2c0.firebaseapp.com",
+    databaseURL: "https://bluebird-ee2c0.firebaseio.com",
+    projectId: "bluebird-ee2c0",
+  }
+
+firebase.initializeApp(firebaseConfig)
+const db = firebase.firestore();
+
+function sendmail(){
+	var button = document.getElementsByClassName('get-access')[0];
+	var mail = document.getElementsByClassName('email')[0].value;
+	var $mailele = $("#email");
+	console.log(mail);
+	if (validateEmail(mail)) {
+		// $mailele.text(email + " is valid :)");
+		$mailele.css("border-color", "green");
+		button.disabled = false;
+		db.collection("pre-users").add({
+			email: mail,
+		})
+		document.getElementsByClassName("lead")[0].innerHTML = "<p> ThankYou! We'll soon mail you the link. </p>";
+	  } else {
+		// $mailele.text(email + " is not valid :(");
+		$mailele.css("border-color", "red");
+		button.disabled = true
+	  }
+
+
+}
+
+function validateEmail(email) {
+	const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+  }
+
+  function validate(){
+	var button = document.getElementsByClassName('get-access')[0];
+	var mail = document.getElementsByClassName('email')[0].value;
+	var $mailele = $("#email");
+	console.log(mail);
+	if (validateEmail(mail)) {
+		// $mailele.text(email + " is valid :)");
+		$mailele.css("border-color", "green");
+		button.disabled = false;
+
+	  } else {
+		// $mailele.text(email + " is not valid :(");
+		$mailele.css("border-color", "red");
+		button.disabled = true
+	  }
+  }
