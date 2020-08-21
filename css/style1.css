@@ -120,6 +120,17 @@ body {
   text-align: center;
 }
 
+.intro-para p{
+  margin-top: 12px;
+  font-size: 18px;
+  font-family: "Eina01-Regular", sans-serif;
+}
+
+.highlight{
+  text-decoration: underline;
+  text-decoration-color: #4285F4 ;
+}
+
 #pitch-in-black{
   margin-top:20px;
 }
@@ -171,7 +182,7 @@ body {
   }
 
   .index-header-img{
-      width:500px;
+      width:420px;
       opacity: 1;
       display: inline-block;
   }
@@ -413,7 +424,7 @@ a:active {
 .how-it-works{
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #FFFFFF;
+  background-color: #FAFAFA;
 }
 
 .how-it-works p{
