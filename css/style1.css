@@ -564,14 +564,14 @@ a:active {
 .teammate {
   background-color: #fafafa;
   margin-top:20px;
-  height: 300px;
+  height: 260px;
 }
 
 @media (min-width: 576px){
   .teammate {
     background-color: #fafafa;
     margin-top:50px;
-    height: 300px;
+    height: 260px;
   }
 }
 
