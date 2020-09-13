@@ -1133,3 +1133,16 @@ height: 26.72px;
       padding-bottom:80px;
   }
   }
+
+  .social-links a{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .social-links h5{
+    margin-right: 10px;
+  }
+
+  .social-links{
+    margin-bottom: 20px;
+  }
