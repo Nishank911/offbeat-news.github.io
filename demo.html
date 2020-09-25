@@ -9,6 +9,8 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="images/favicon.png">
     <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" 
+rel="stylesheet">
     <!-- City -->
     <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" 
 rel="stylesheet">
@@ -18,7 +20,8 @@ rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMGE7Q2WS8"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -76,38 +79,43 @@ rel="stylesheet">
 
 <div class="container">
   <div class="row mb-2">
-    <div class="about-mission product-screen col-lg-6 col-md-6 col-sm-12">
-      <center>
-        <video
+    <div class="col-lg-8 col-md-10 col-sm-12 offset-lg-2 offset-md-1">
+      <div class="video-js-responsive-container vjs-hd">
+        <center><video
           id="my-player"
-          class="afterglow video"
+          class="video-js vjs-theme-city"
           controls
           preload="auto"
-          width="400"
-          height="600"
+          width="720"
+          height="460"
           poster="MY_VIDEO_POSTER.jpg"
           data-setup="{}"
-          style="object-fit: fill;"
         >
           <source src="zoom_8.mp4" type="video/mp4" />
-        </video>
-      </center>
-    </div>
-
-    <!-- to conclude div -->
-    <div class="about-mission product-screen col-lg-6 col-md-6 col-sm-12">
-      <div class="container">
-        <h2>Staying well informed of a sane mind</h2>
-        <h5>is the foundation for great ideas and better mental health </h5>
-        <br>
-        <div class="col-md-8 offset-md-2">
-          <p>We would love to show you what we have built.</p>
-          <br><br>
-          <a href="https://play.google.com/store/apps/details?id=com.offbeat.today"><img src="images/play.png" class="col-md-3"></img>
-          <br><br><br><h2>Install Now</h2>
-          </a>
-        </div>
+          <!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video></center>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- to conclude div -->
+<div class="about-mission product-screen">
+  <div class="container">
+    <h2>Staying well informed of a sane mind</h2>
+    <h5>is the foundation for great ideas and better mental health </h5>
+    <br>
+    <div class="col-md-8 offset-md-2">
+      <p>We would love to show you what we have built.</p>
+      <br><br>
+      <a href="https://play.google.com/store/apps/details?id=com.offbeat.today"><img src="images/play.png" class="col-md-3"></img>
+      <br><br><br><h2>Install Now</h2>
+      </a>
     </div>
   </div>
 </div>
@@ -156,6 +164,9 @@ rel="stylesheet">
   </div>
 </div>
 </footer>
+
+
+      <script src="https://vjs.zencdn.net/7.8.4/video.js" />
 
   </body>
 </html>
