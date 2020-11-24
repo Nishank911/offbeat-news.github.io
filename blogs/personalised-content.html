@@ -12,42 +12,33 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <title>Blogs by Offbeat</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMGE7Q2WS8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZMGE7Q2WS8');
+    </script>
+    <!--HEADER AND FOOTER-->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+
+    <script>
+      $(function(){
+        $('#header').load('../blog-header.html');
+        $('#footer').load('../blog-footer.html');
+      });
+    </script>
   </head>
 
   <body>
 
-    <header>
-      <nav class="navbar navbar-expand-sm navbar-light fixed-top .navbar-custom">
-        <div class="container">
-          <a class="navbar-brand" href="../">
-            <img src="../images/logo.png" alt="Logo" style="height:40px">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item item1">
-                <a class="nav-link" href="../product">Product</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../blogs">Blogs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="../contact">Contact</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-
-              <li><a href="http://app.offbeat.today" target="_blank"><button type="button" class="btn btn-primary">Try Beta</button></a> </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <header id="header"></header>
 
 <!-- Contact US -->
 <div class="container privacy-div" style="padding-top: 60px; padding-bottom: 60px;">
@@ -152,45 +143,7 @@ So do not drown in the enormity of the news available. Instead, use the technolo
 
 
 <!-- Footer -->
-<footer>
-<div class="container">
-  <div class="row">
-      <div class="col-lg-2 col-md-2 col-12">
-        <img src="../images/logo.png" alt="" style="height:32px">
-        <ul class="list-unstyled text-small">
-          <li><p>All rights reserved.</p></li>
-        </ul>
-        <!-- <p>All rights reserved.</p> -->
-      </div>
-      <div class="col-lg-2 col-md-3 offset-md-1 offset-lg-1 col-6 left-align">
-          <h4 class="left-align">Contact us</h4>
-          <ul class="list-unstyled text-small">
-            <li><p>hello@offbeat.today</p></li>
-
-          </ul>
-      </div>
-      <div class="col-lg-2 col-md-3 offset-md-1 offset-lg-1 col-6">
-        <h4 class="left-align">Who are we?</h4>
-        <ul class="left-align list-unstyled">
-          <li><a class="" href="about">About us</a></li>
-          <li><a class="" href="privacy-policy">Terms & Privacy</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-4 col-md-4 col-12">
-
-        <div class="align-image social-links">
-          <a href="https://facebook.com/offbeatnews/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-          <a href="https://twitter.com/offbeatnews_/"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/company/offbeatnews"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
-          <a href="https://www.instagram.com/_offbeatnews/"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
-        </div>
-        <div class="align-image social-links">
-          <h5 class="extra-top-space-on-mobile">Built with ❤️ in India</h5>
-        </div>
-      </div>
-  </div>
-</div>
-</footer>
+<footer id="footer"></footer>
 
 
   </body>
